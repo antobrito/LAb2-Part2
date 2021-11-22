@@ -16,7 +16,10 @@ namespace ProductsApi
 
 
            // agregamos esta clase para poder colsjultar los  productos 
-            public virtual Product[] Products { get; set; }
+            public virtual Product[] Products { get; set; } = new[] {
+                new Product {Name ="value1" },
+                new Product {Name ="value2" }
+            };
         }
 
         public partial class Product

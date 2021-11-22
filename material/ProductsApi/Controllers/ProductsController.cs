@@ -31,11 +31,11 @@ namespace ProductsApi.Controllers
         // GET: api/<ProductsController>
         [HttpGet]
 
-        public IEnumerable<Product> Get()
+        public ActionResult Get()
         {
             _logger.LogInformation("LLamado del Get ejecutandose");
 
-            return _dbContext.Products;
+            return Ok(_dbContext.Products);
 
            /* return new[] {
                 new Product {Name ="value1" },
